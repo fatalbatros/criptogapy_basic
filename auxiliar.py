@@ -1,4 +1,4 @@
-int_to_char_table = {'0':'0',
+fat_ascii = {'0':'0',
          '1':'1',
          '2':'2',
          '3':'3',
@@ -64,14 +64,14 @@ int_to_char_table = {'0':'0',
          '63':'Y',
 }
 
-char_to_int_table= {v:k for k,v in int_to_char_table.items()}
+fat_ascii_inverse= {v:k for k,v in fat_ascii.items()}
 
 def int_to_char(number):
-    return int_to_char_table[number]
+    return fat_ascii[number]
     
 
 def char_to_int(character):
-    return char_to_int_table[character]
+    return fat_ascii_inverse[character]
     
 
 def text_to_bits(text):
